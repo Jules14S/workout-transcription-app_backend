@@ -23,6 +23,8 @@ function App() {
         body: formData,
       });
 
+      console.log("Response:", response); // Add this line
+
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
@@ -39,6 +41,7 @@ function App() {
       console.error('Error:', error);
     }
   };
+
 
   return (
     <div className="app">
